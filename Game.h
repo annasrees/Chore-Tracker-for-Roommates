@@ -13,14 +13,17 @@ private:
     string householdName;
     char userChoice;
     vector<Chore> choreList;
+    Chore chore;
+    Roommate roommate;
 public:
     //constructor
-    Game();
+    Game() : chore(), roommate() {}
     void printHomeScreen() const;
     string getHouseholdName();
     void printOptions (ostream &outs);
     char getPlayerChoice(ostream &outs, istream &ins);
     void addToChoreList(Chore chore, Chore pointValue);
     void getInfo();
+
 };
 #endif //M2OEP_ASREES_GAME_H

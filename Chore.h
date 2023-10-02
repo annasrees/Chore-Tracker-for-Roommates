@@ -37,6 +37,8 @@ public:
     Roommate randomRoommate(vector<Roommate> roommates);
     //get Chore Info from user
     void getInfo();
+    //output file
+    void outfile();
 
 };
 #endif //M2OEP_ASREES_CHORE_H

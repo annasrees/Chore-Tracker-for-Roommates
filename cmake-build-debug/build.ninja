@@ -49,14 +49,14 @@ cmake_ninja_workdir = C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-as
 
 build cmake_object_order_depends_target_M2OEP: phony || CMakeFiles/M2OEP.dir
 
-build CMakeFiles/M2OEP.dir/Roommate.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-asrees/Roommate.cpp || cmake_object_order_depends_target_M2OEP
-  DEP_FILE = CMakeFiles\M2OEP.dir\Roommate.cpp.obj.d
+build CMakeFiles/M2OEP.dir/Chore.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-asrees/Chore.cpp || cmake_object_order_depends_target_M2OEP
+  DEP_FILE = CMakeFiles\M2OEP.dir\Chore.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\M2OEP.dir
   OBJECT_FILE_DIR = CMakeFiles\M2OEP.dir
 
-build CMakeFiles/M2OEP.dir/Chore.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-asrees/Chore.cpp || cmake_object_order_depends_target_M2OEP
-  DEP_FILE = CMakeFiles\M2OEP.dir\Chore.cpp.obj.d
+build CMakeFiles/M2OEP.dir/Game.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-asrees/Game.cpp || cmake_object_order_depends_target_M2OEP
+  DEP_FILE = CMakeFiles\M2OEP.dir\Game.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\M2OEP.dir
   OBJECT_FILE_DIR = CMakeFiles\M2OEP.dir
@@ -67,8 +67,8 @@ build CMakeFiles/M2OEP.dir/main.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:
   OBJECT_DIR = CMakeFiles\M2OEP.dir
   OBJECT_FILE_DIR = CMakeFiles\M2OEP.dir
 
-build CMakeFiles/M2OEP.dir/Game.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-asrees/Game.cpp || cmake_object_order_depends_target_M2OEP
-  DEP_FILE = CMakeFiles\M2OEP.dir\Game.cpp.obj.d
+build CMakeFiles/M2OEP.dir/Roommate.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:/Users/Anna/CLionProjects/Module$ 2$ Adv$ Prog/M2OEP-asrees/Roommate.cpp || cmake_object_order_depends_target_M2OEP
+  DEP_FILE = CMakeFiles\M2OEP.dir\Roommate.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\M2OEP.dir
   OBJECT_FILE_DIR = CMakeFiles\M2OEP.dir
@@ -81,7 +81,7 @@ build CMakeFiles/M2OEP.dir/Game.cpp.obj: CXX_COMPILER__M2OEP_unscanned_Debug C$:
 #############################################
 # Link the executable M2OEP.exe
 
-build M2OEP.exe: CXX_EXECUTABLE_LINKER__M2OEP_Debug CMakeFiles/M2OEP.dir/Roommate.cpp.obj CMakeFiles/M2OEP.dir/Chore.cpp.obj CMakeFiles/M2OEP.dir/main.cpp.obj CMakeFiles/M2OEP.dir/Game.cpp.obj
+build M2OEP.exe: CXX_EXECUTABLE_LINKER__M2OEP_Debug CMakeFiles/M2OEP.dir/Chore.cpp.obj CMakeFiles/M2OEP.dir/Game.cpp.obj CMakeFiles/M2OEP.dir/main.cpp.obj CMakeFiles/M2OEP.dir/Roommate.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\M2OEP.dir

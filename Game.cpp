@@ -8,6 +8,8 @@ using namespace std;
 /**
  * The Game class manages functionality of the game features, such as the household name, the options and menu screens,
  * the information screens, and getting the player choice
+ *
+ * has component classes Chore and Roommate; these are aspects of the program game
  */
 
 Game::Game() {}
@@ -31,7 +33,8 @@ string Game::getHouseholdName() {
 }
 
 void Game::printOptions(ostream &outs) {
-    outs << "Press (c) to add a chore to the list, (d) to check off a chore, (n) to add a roommate, (i) for information, or (e) to exit: ";
+    outs << "Press (c) to add a chore to the list, (d) to check off a chore, (n) to add a roommate, (i) for information,"
+            " or (e) to exit: ";
 }
 
 char Game::getPlayerChoice(ostream &outs, istream &ins) {
@@ -72,6 +75,14 @@ void Game::getInfo() {
     cout << "___________________________________________________________________________________________________________\n" << endl;
 }
 
+void Game::gameFile() {
+    //TODO: write an output file which prints out the roommate scoreboard and the to-do list for all the roommates
+    ofstream outputFile("ChoreOutput.txt");
+    outputFile << "";
+
+    outputFile.close();
+
+}
 
 
 

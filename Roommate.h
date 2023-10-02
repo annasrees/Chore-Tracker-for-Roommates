@@ -33,5 +33,7 @@ public:
 
     //collects user info for roommate
     void getInfo();
+    //print roommate's points
+    void printPoints();
 };
 #endif //M2OEP_ASREES_ROOMMATE_H

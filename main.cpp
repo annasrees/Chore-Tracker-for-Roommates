@@ -6,6 +6,8 @@
 #include "Chore.h"
 #include <vector>
 #include <algorithm>
+#include <fstream>
+#include <iomanip>
 using namespace std;
 /**
  * To be completed:
@@ -20,6 +22,7 @@ int main() {
     game.printHomeScreen();
     Chore newChore; //in the event of adding a chore ('c')
     Roommate newRoommate; //in the event of adding a new roommate ('n')
+    Roommate assignedRoommate; //roommate assigned to x chore
     vector<Chore> choreList;
     vector<Roommate> roommateList;
     string input;
@@ -28,10 +31,12 @@ int main() {
     string houseName = game.getHouseholdName();
     cout << "Welcome " << houseName << "!" << endl;
 
+    //initial cout statement to tell user to add a new roommate first
+    cout << "First, type 'n' to add a roommate to the household." << endl;
     //get user choice
     char choice = game.getPlayerChoice(cout, cin);
-
-
+    ofstream outputFile("ChoreOutput.txt");
+    outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     while (choice != 'e') {
         switch(choice) {
             case 'c':
@@ -42,29 +47,40 @@ int main() {
                 cout << "Chore frequency: every " << newChore.getFrequency() << " day(s)" << endl;
                 //add chore to chore list
                 choreList.push_back(newChore);
+                //assign a roommate to the chore:
+                assignedRoommate = newChore.randomRoommate(roommateList);
+                cout << assignedRoommate.getName() << " has been assigned to the new chore: " << newChore.getChoreName() << endl;
+                newChore.outfile(); //send new info to outfile
+                outputFile.close();
                 choice = game.getPlayerChoice(cout, cin);
                 break;
             case 'd':
                 //a chore has been accomplished
-                cout << "Who completed this chore? " << endl;
-                getline(cin, input);
-                while ((cin.fail()) || input.empty()) {
-                    cin.clear();
-                    cout << "No input. Enter a sentence: " << endl;
-                    getline(cin, input);
+                if(choreList.size() == 0) {
+                    cout << "There are no chores in the list. Type 'c' to add a chore!" << endl;
 
                 }
-                cout << "What chore have they completed? " << endl;
-                getline(cin, input);
-                while ((cin.fail()) || input.empty()) {
-                    cin.clear();
-                    cout << "No input. Enter a sentence: " << endl;
+                else{
+                    cout << "Who completed this chore? " << endl;
                     getline(cin, input);
+                    while ((cin.fail()) || input.empty()) {
+                        cin.clear();
+                        cout << "No input. Enter a sentence: " << endl;
+                        getline(cin, input);
+
+                    }
+                    cout << "What chore have they completed? " << endl;
+                    getline(cin, input);
+                    while ((cin.fail()) || input.empty()) {
+                        cin.clear();
+                        cout << "No input. Enter a sentence: " << endl;
+                        getline(cin, input);
+
+                    }
+
+                    cout << "Good job!" << endl;
 
                 }
-
-                cout << "Good job!" << endl;
-
                 choice = game.getPlayerChoice(cout, cin);
                 break;
             case 'n':

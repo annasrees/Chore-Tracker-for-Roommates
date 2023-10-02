@@ -57,3 +57,6 @@ void Roommate::getInfo() {
     this ->setLate(initialLate);
 }
 
+void Roommate::printPoints() {
+    cout << this->getName() << "'s total points: " << this->getPoints() << endl;
+}
