@@ -1,0 +1,3 @@
+C:/Users/Anna/CLionProjects/Module 2 Adv Prog/M2OEP-asrees/cmake-build-debug/CMakeFiles/M2OEP.dir
+C:/Users/Anna/CLionProjects/Module 2 Adv Prog/M2OEP-asrees/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Anna/CLionProjects/Module 2 Adv Prog/M2OEP-asrees/cmake-build-debug/CMakeFiles/rebuild_cache.dir
