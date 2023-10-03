@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.26"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "M2OEP-asrees",
+					"name" : "testing_activity",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "M2OEP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-M2OEP-Debug-65353a76ed12b4da327c.json",
-					"name" : "M2OEP",
+					"id" : "testing_activity::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testing_activity-Debug-7a835c4e706774a0a002.json",
+					"name" : "testing_activity",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Anna/CLionProjects/Module 2 Adv Prog/M2OEP-asrees/cmake-build-debug",
-		"source" : "C:/Users/Anna/CLionProjects/Module 2 Adv Prog/M2OEP-asrees"
+		"build" : "C:/Users/annas/OneDrive - University of Vermont/Junior Year/Adv Programming/Module 2/testing_activity/cmake-build-debug",
+		"source" : "C:/Users/annas/OneDrive - University of Vermont/Junior Year/Adv Programming/Module 2/testing_activity"
 	},
 	"version" : 
 	{

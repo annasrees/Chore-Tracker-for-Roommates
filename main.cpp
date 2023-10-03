@@ -13,6 +13,7 @@ using namespace std;
  * To be completed:
  * TODO: input validate to find roommate in roommateList
  * TODO: input validate to find chore in choreList
+ * TODO: add more comments everywhere!
  * @return
  */
 
@@ -35,6 +36,7 @@ int main() {
     cout << "First, type 'n' to add a roommate to the household." << endl;
     //get user choice
     char choice = game.getPlayerChoice(cout, cin);
+
     ofstream outputFile("ChoreOutput.txt");
     outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     while (choice != 'e') {
@@ -56,7 +58,7 @@ int main() {
                 break;
             case 'd':
                 //a chore has been accomplished
-                if(choreList.size() == 0) {
+                if(choreList.empty()) {
                     cout << "There are no chores in the list. Type 'c' to add a chore!" << endl;
 
                 }

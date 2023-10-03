@@ -4,6 +4,7 @@
 #include "Game.h"
 #include <iostream>
 #include <limits>
+#include <fstream>
 using namespace std;
 /**
  * The Game class manages functionality of the game features, such as the household name, the options and menu screens,

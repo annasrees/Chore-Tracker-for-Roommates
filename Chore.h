@@ -22,22 +22,78 @@ public:
     Chore();
 
     //getters
+    /**
+     * gets the user's chore name
+     * takes in: nothing
+     * @return string of chore name
+     */
     string getChoreName();
+    /**
+     * gets the user's chore's point value
+     * takes in: nothing
+     * @return: int of the chore's point value
+     */
     int getPointValue();
+    /**
+     * gets the expected chore frequency, which is what will determine the "lateness" of the chore
+     * for the assigned roommate
+     * takes in: nothing
+     * @return: integer of the frequency expected, in days (so user input of 7 would mean weekly, for example)
+     */
     int getFrequency();
+    /**
+     * gets the assigned roommate from the vector of roommates in the household
+     * takes in: nothing
+     * @return: roommate assigned
+     */
     Roommate getRoommate(); //do i need this?
 
     //setters
+    /**
+     * sets the chore name value
+     * @param chore is the user's string chore name
+     * returns: nothing
+     */
     void setChoreName(string chore);
+    /**
+     * Sets the chore's point value (how strenuous is the chore? the more strenuous, the higher the point value)
+     * @param points the user's point value
+     * returns: nothing
+     */
     void setPointValue(int points);
+    /**
+     * sets the expected frequency of the chore, in days
+     * @param frequency the user's desired chore frequency, in days
+     * returns: nothing
+     */
     void setFrequency(int frequency);
+    /**
+     * Sets the roommate assigned to the chore
+     * @param roommates the roommate assigned
+     * returns: nothing
+     */
     void setRoommate(Roommate roommates);
 
     //randomize roommate
+    /**
+     * Takes in a vector of all the roommates and randomly chooses one to be assigned the chore
+     * @param roommates vector of all the household's roommates
+     * @return the randomly selected roommate from the vector
+     */
     Roommate randomRoommate(vector<Roommate> roommates);
     //get Chore Info from user
+    /**
+     * Collects the user's desired input values for the chore object
+     * takes in: nothing
+     * returns: nothing
+     */
     void getInfo();
     //output file
+    /**
+     * output file for the chore's information, including the roommate assigned to it and its point value
+     * takes in: nothing
+     * returns: nothing
+     */
     void outfile();
 
 };

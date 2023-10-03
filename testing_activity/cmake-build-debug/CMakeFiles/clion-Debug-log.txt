@@ -1,0 +1,4 @@
+"C:\Users\annas\OneDrive - University of Vermont\Programs\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Users/annas/OneDrive - University of Vermont/Programs/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\annas\OneDrive - University of Vermont\Junior Year\Adv Programming\Module 2\testing_activity" -B "C:\Users\annas\OneDrive - University of Vermont\Junior Year\Adv Programming\Module 2\testing_activity\cmake-build-debug"
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/annas/OneDrive - University of Vermont/Junior Year/Adv Programming/Module 2/testing_activity/cmake-build-debug
