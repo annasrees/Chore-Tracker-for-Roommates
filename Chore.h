@@ -5,6 +5,7 @@
 #ifndef M2OEP_ASREES_CHORE_H
 #define M2OEP_ASREES_CHORE_H
 #include "Roommate.h"
+#include "Time.h"
 #include <iostream>
 #include <vector>
 #include <sstream>
@@ -17,6 +18,7 @@ private:
     int pointValue;
     int frequency; //times assigned per week
     Roommate roommateAssigned; //has-a relationship with roommate
+    Time time; //has-a relationship with the passage of time
 public:
     //constructor
     Chore();
@@ -81,6 +83,12 @@ public:
      * @return the randomly selected roommate from the vector
      */
     Roommate randomRoommate(vector<Roommate> roommates);
+
+    /**
+     * timeCheck uses the time class to assess how long it has been since the chore has been assigned
+     */
+    void timeCheck();
+
     //get Chore Info from user
     /**
      * Collects the user's desired input values for the chore object

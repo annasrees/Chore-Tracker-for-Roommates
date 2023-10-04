@@ -2,6 +2,7 @@
 // Created by Anna on 9/7/2023.
 //
 #include "Game.h"
+#include "Time.h"
 #include "Roommate.h"
 #include "Chore.h"
 #include <vector>
@@ -27,6 +28,10 @@ int main() {
     vector<Chore> choreList;
     vector<Roommate> roommateList;
     string input;
+    Time time;
+
+    //start the time
+    time.setStartTime();
 
     //get householdname
     string houseName = game.getHouseholdName();
@@ -37,22 +42,27 @@ int main() {
     //get user choice
     char choice = game.getPlayerChoice(cout, cin);
 
+    //outfile which holds the chores and when they're due
     ofstream outputFile("ChoreOutput.txt");
     outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     while (choice != 'e') {
         switch(choice) {
             case 'c':
+                //gather the new chore info
                 newChore.getInfo();
                 cout << "Your new chore: " << endl;
                 cout << "Chore name: " << newChore.getChoreName() << endl;
                 cout << "Chore points: " << newChore.getPointValue() << endl;
                 cout << "Chore frequency: every " << newChore.getFrequency() << " day(s)" << endl;
+                //newChore.setStartTime(); TODO: figure out how to make this work
+
                 //add chore to chore list
                 choreList.push_back(newChore);
+
                 //assign a roommate to the chore:
                 assignedRoommate = newChore.randomRoommate(roommateList);
                 cout << assignedRoommate.getName() << " has been assigned to the new chore: " << newChore.getChoreName() << endl;
-                newChore.outfile(); //send new info to outfile
+                newChore.outfile(); //send new chore's info to outfile
                 outputFile.close();
                 choice = game.getPlayerChoice(cout, cin);
                 break;
