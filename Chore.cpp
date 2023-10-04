@@ -3,6 +3,7 @@
 //
 #include "Chore.h"
 #include "Roommate.h"
+#include "Time.h"
 #include <iostream>
 #include <random>
 #include <fstream>
@@ -54,6 +55,17 @@ Roommate Chore::randomRoommate(vector<Roommate> roommates) {
     int index = rand() % roommatesVec.size(); //get index of the assigned roommate
     Roommate assignedRoommate = roommatesVec[index];
     return assignedRoommate;
+}
+
+void Chore::startTime() {
+    time.setStartTime();
+}
+
+void Chore::timeCheck() {
+    double passedTime = time.getElapsedTime();
+    if (passedTime > frequency) {
+        roommateAssigned.setLate(true);
+    }
 }
 
 void Chore::getInfo() {

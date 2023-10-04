@@ -23,7 +23,7 @@ public:
      * takes in: nothing
      * returns: startTime
      */
-     time_t setStartTime();
+     void setStartTime();
      /**
       * when this func is called, it returns the amount of time passed since starting to run the
       * program in DAYS, since this is how the chores are counted for lateness

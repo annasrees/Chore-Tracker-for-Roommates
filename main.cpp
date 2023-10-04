@@ -28,10 +28,10 @@ int main() {
     vector<Chore> choreList;
     vector<Roommate> roommateList;
     string input;
-    Time time;
+    //Time time;
 
     //start the time
-    time.setStartTime();
+    //time.setStartTime();
 
     //get householdname
     string houseName = game.getHouseholdName();
@@ -54,7 +54,7 @@ int main() {
                 cout << "Chore name: " << newChore.getChoreName() << endl;
                 cout << "Chore points: " << newChore.getPointValue() << endl;
                 cout << "Chore frequency: every " << newChore.getFrequency() << " day(s)" << endl;
-                //newChore.setStartTime(); TODO: figure out how to make this work
+                newChore.startTime(); //starts the clock for this chore
 
                 //add chore to chore list
                 choreList.push_back(newChore);
@@ -75,17 +75,21 @@ int main() {
                 else{
                     cout << "Who completed this chore? " << endl;
                     getline(cin, input);
-                    while ((cin.fail()) || input.empty()) {
+                    //TODO: overload "==" operator for roommate
+                    //auto it = find(roommateList.begin(), roommateList.end(), cin);
+                    while ((cin.fail()) || input.empty()/* || it == roommateList.end()*/) {
                         cin.clear();
-                        cout << "No input. Enter a sentence: " << endl;
+                        cout << "Hmm.. couldn't find that roommate. Enter a roommate: " << endl;
                         getline(cin, input);
 
                     }
                     cout << "What chore have they completed? " << endl;
                     getline(cin, input);
-                    while ((cin.fail()) || input.empty()) {
+                    //TODO: overload "==" operator for chore
+                    //it = find(choreList.begin(), choreList.end(), cin);
+                    while ((cin.fail()) || input.empty()/* || it == choreList.end()*/) {
                         cin.clear();
-                        cout << "No input. Enter a sentence: " << endl;
+                        cout << "Hmm.. couldn't find that chore. Enter your finished chore: " << endl;
                         getline(cin, input);
 
                     }

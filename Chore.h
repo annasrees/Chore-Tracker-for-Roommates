@@ -85,7 +85,14 @@ public:
     Roommate randomRoommate(vector<Roommate> roommates);
 
     /**
+     * starts the time clock for the chore
+     * restarts whenever a chore is checked off (option d)
+     */
+    void startTime();
+
+    /**
      * timeCheck uses the time class to assess how long it has been since the chore has been assigned
+     * if the time passed is greater than the frequency, the roommate assigned's lateness val flips to true
      */
     void timeCheck();
 
