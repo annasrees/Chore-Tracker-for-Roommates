@@ -73,5 +73,6 @@ public:
      * returns: nothing
      */
     void printPoints();
+    friend bool operator == (const Roommate &lhs, const Roommate &rhs);
 };
 #endif //M2OEP_ASREES_ROOMMATE_H

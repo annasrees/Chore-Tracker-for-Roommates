@@ -131,3 +131,7 @@ void Chore::outfile() {
     outputFile << setw(10) << left << this->choreName << "|" << setw(5) << left << this->pointValue << "|" << setw(10) << roommateAssigned.getName() << "|" << endl;
     outputFile.close();
 }
+
+bool operator == (const Chore &lhs, const Chore &rhs) {
+    return lhs.choreName == rhs.choreName;
+}

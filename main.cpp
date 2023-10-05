@@ -12,9 +12,8 @@
 using namespace std;
 /**
  * To be completed:
- * TODO: input validate to find roommate in roommateList
- * TODO: input validate to find chore in choreList
- * TODO: add more comments everywhere!
+
+ * TODO: change choreList and roomMate list to just be list of names!!!
  * @return
  */
 
@@ -76,7 +75,7 @@ int main() {
                     cout << "Who completed this chore? " << endl;
                     getline(cin, input);
                     //TODO: overload "==" operator for roommate
-                    //auto it = find(roommateList.begin(), roommateList.end(), cin);
+                    auto it = find(roommateList.begin(), roommateList.end(), cin);
                     while ((cin.fail()) || input.empty()/* || it == roommateList.end()*/) {
                         cin.clear();
                         cout << "Hmm.. couldn't find that roommate. Enter a roommate: " << endl;
@@ -85,8 +84,7 @@ int main() {
                     }
                     cout << "What chore have they completed? " << endl;
                     getline(cin, input);
-                    //TODO: overload "==" operator for chore
-                    //it = find(choreList.begin(), choreList.end(), cin);
+                    it = find(choreList.begin(), choreList.end(), cin);
                     while ((cin.fail()) || input.empty()/* || it == choreList.end()*/) {
                         cin.clear();
                         cout << "Hmm.. couldn't find that chore. Enter your finished chore: " << endl;

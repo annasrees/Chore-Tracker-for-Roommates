@@ -60,3 +60,7 @@ void Roommate::getInfo() {
 void Roommate::printPoints() {
     cout << this->getName() << "'s total points: " << this->getPoints() << endl;
 }
+
+bool operator == (const Roommate &lhs, const Roommate &rhs) {
+    return lhs.name == rhs.name;
+}

@@ -111,5 +111,7 @@ public:
      */
     void outfile();
 
+    friend bool operator == (const Chore&lhs, const Chore &rhs);
+
 };
 #endif //M2OEP_ASREES_CHORE_H
