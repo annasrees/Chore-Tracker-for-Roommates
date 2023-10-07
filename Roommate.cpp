@@ -13,7 +13,10 @@ using namespace std;
  * Roommates have a name given by the user, and are initially set to have 0 points and to not be late on their chores
  * As a roommate completes a chore, their points will increase.
  * */;
-Roommate::Roommate() {}
+Roommate::Roommate() {
+    points = 0;
+    late = false;
+}
 
 string Roommate::getName() {
     return name;

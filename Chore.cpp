@@ -125,9 +125,8 @@ void Chore::getInfo() {
 }
 
 void Chore::outfile() {
-    //TODO: write an output file which prints out the roommate scoreboard and the to-do list for all the roommates
     ofstream outputFile("ChoreOutput.txt");
-    outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
+    //outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     outputFile << setw(10) << left << this->choreName << "|" << setw(5) << left << this->pointValue << "|" << setw(10) << roommateAssigned.getName() << "|" << endl;
     outputFile.close();
 }

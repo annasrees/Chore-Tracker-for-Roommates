@@ -43,7 +43,8 @@ int main() {
     char choice = game.getPlayerChoice(cout, cin);
 
     //outfile which holds the chores and when they're due
-    ofstream outputFile("ChoreOutput.txt");
+    //TODO: get this file out of the cmake-build!!!!! rah
+    ofstream outputFile("Module 2/ChoreOutput.txt");
     outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     while (choice != 'e') {
         switch(choice) {
@@ -113,6 +114,13 @@ int main() {
                 game.getInfo();
                 choice = game.getPlayerChoice(cout, cin);
                 break;
+        }
+        //checking the time for each chore to make sure none of them are late
+        for (int i = 0; i < choreList.size(); i++){
+            choreList[i].timeCheck();
+            if (choreList[i].getRoommate().getLate() == true) {
+                cout << choreList[i].getRoommate().getName() << " is late on their chore!" << endl;
+            }
         }
     }
     return 0;
