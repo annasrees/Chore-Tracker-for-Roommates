@@ -12,4 +12,5 @@ add_executable(M2OEP
         Roommate.h
         Roommate.cpp
         Time.h
-        Time.cpp)
+        Time.cpp
+        testing.cpp)

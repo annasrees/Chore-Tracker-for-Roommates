@@ -12,13 +12,10 @@
 using namespace std;
 /**
  * To be completed:
-
- * TODO: change choreList and roomMate list to just be list of names!!!
  * @return
  */
-
+//TODO: write testing program!!!!!!!!!!!
 int main() {
-    //start page
     Game game;
     game.printHomeScreen();
     Chore newChore; //in the event of adding a chore ('c')
@@ -28,10 +25,6 @@ int main() {
     vector<Roommate> roommateList;
     vector<string> roommateNameList;
     string input;
-    //Time time;
-
-    //start the time
-    //time.setStartTime();
 
     //get householdname
     string houseName = game.getHouseholdName();
@@ -43,7 +36,6 @@ int main() {
     char choice = game.getPlayerChoice(cout, cin);
 
     //outfile which holds the chores and when they're due
-    //TODO: get this file out of the cmake-build!!!!! rah
     ofstream outputFile("ChoreOutput.txt");
     outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     while (choice != 'e') {
