@@ -26,6 +26,7 @@ int main() {
     Roommate assignedRoommate; //roommate assigned to x chore
     vector<Chore> choreList;
     vector<Roommate> roommateList;
+    vector<string> roommateNameList;
     string input;
     //Time time;
 
@@ -74,8 +75,9 @@ int main() {
                 else{
                     cout << "Who completed this chore? " << endl;
                     getline(cin, input);
-                    //TODO: overload "==" operator for roommate
-                    auto it = find(roommateList.begin(), roommateList.end(), cin);
+
+                    vector<string>::iterator it;
+                  //  it = find(roommateNameList.begin(), roommateNameList.end(), cin);
                     while ((cin.fail()) || input.empty()/* || it == roommateList.end()*/) {
                         cin.clear();
                         cout << "Hmm.. couldn't find that roommate. Enter a roommate: " << endl;
@@ -84,7 +86,7 @@ int main() {
                     }
                     cout << "What chore have they completed? " << endl;
                     getline(cin, input);
-                    it = find(choreList.begin(), choreList.end(), cin);
+                   // it = find(choreList.begin(), choreList.end(), cin);
                     while ((cin.fail()) || input.empty()/* || it == choreList.end()*/) {
                         cin.clear();
                         cout << "Hmm.. couldn't find that chore. Enter your finished chore: " << endl;
@@ -92,7 +94,7 @@ int main() {
 
                     }
 
-                    cout << "Good job!" << endl;
+
 
                 }
                 choice = game.getPlayerChoice(cout, cin);
@@ -103,6 +105,7 @@ int main() {
                 cout << "New roommate's name: " << newRoommate.getName() << endl;
                 cout << "Their points : " << newRoommate.getPoints() << endl;
                 roommateList.push_back(newRoommate);
+                roommateNameList.push_back(newRoommate.getName());
                 choice = game.getPlayerChoice(cout, cin);
                 break;
             case 'i':

@@ -1,1 +1,2 @@
 Chore     |Points|Roommate Assigned|
+mop the floor|2    |          |
