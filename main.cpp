@@ -44,7 +44,7 @@ int main() {
 
     //outfile which holds the chores and when they're due
     //TODO: get this file out of the cmake-build!!!!! rah
-    ofstream outputFile("Module 2/ChoreOutput.txt");
+    ofstream outputFile("ChoreOutput.txt");
     outputFile << setw(10) << left << "Chore" << "|" << setw(5) << left << "Points" << "|" << setw(10) << left << "Roommate Assigned" << "|" << endl;
     while (choice != 'e') {
         switch(choice) {

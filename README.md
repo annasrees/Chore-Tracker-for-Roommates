@@ -1,7 +1,5 @@
 # M2OEP-asrees
 
-## Inheritance Class Relationship
-
 ## Component class relationship
 
 There are several classes in this project which use component class relationships with each other 
@@ -12,4 +10,7 @@ There are several classes in this project which use component class relationship
 
 **Game class** has-a Roommate and has-a Chore
 - The game class manages the game functionality of this program. It takes in the user's new chore description or new roommate description, and adds it to a vector of chore or roommate objects to manage who is in the household and what is intended to be done.
+
 ## File input/output
+**ChoreOutput.txt** in the chore class and in main
+- the outFile() method in Chore class sends the chore data to the ChoreOutput.txt file and lists the chore, the point value, and the roommate assigned to the chore. 
