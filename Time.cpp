@@ -10,6 +10,10 @@ void Time::setStartTime() {
     startTime = time(nullptr);
 }
 
+time_t Time::getStartTime() {
+    return startTime;
+}
+
 double Time::getElapsedTime() {
     elapsedTime = time(nullptr);
     double secondDifference = (elapsedTime - startTime);

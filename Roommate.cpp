@@ -67,3 +67,7 @@ void Roommate::printPoints() {
 bool operator == (const Roommate &lhs, const Roommate &rhs) {
     return lhs.name == rhs.name;
 }
+
+bool operator != (const Roommate &lhs, const Roommate &rhs) {
+    return lhs.name != rhs.name;
+}

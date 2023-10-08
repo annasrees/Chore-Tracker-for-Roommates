@@ -12,5 +12,16 @@ add_executable(M2OEP
         Roommate.h
         Roommate.cpp
         Time.h
+        Time.cpp)
+
+add_executable(M2OEPTesting
+        Chore.h
+        Chore.cpp
+        Game.h
+        Game.cpp
+        main.cpp
+        Roommate.h
+        Roommate.cpp
+        Time.h
         Time.cpp
         testing.cpp)

@@ -134,3 +134,7 @@ void Chore::outfile() {
 bool operator == (const Chore &lhs, const Chore &rhs) {
     return lhs.choreName == rhs.choreName;
 }
+
+bool operator != (const Chore &lhs, const Chore &rhs) {
+    return lhs.choreName != rhs.choreName;
+}

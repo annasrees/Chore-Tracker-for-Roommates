@@ -73,6 +73,14 @@ public:
      * returns: nothing
      */
     void printPoints();
+
+    /**
+     * overloaded operators - especially used in testing.cpp
+     * @param lhs left hand side
+     * @param rhs right hand side
+     * @return
+     */
     friend bool operator == (const Roommate &lhs, const Roommate &rhs);
+    friend bool operator != (const Roommate &lhs, const Roommate &rhs);
 };
 #endif //M2OEP_ASREES_ROOMMATE_H

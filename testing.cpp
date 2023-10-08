@@ -51,10 +51,42 @@ bool testRoommate() {
     return passed;
 }
 
-bool testGame() {
+bool testChore() {
     bool passed = true;
-    //test constructor
-    Game game;
+    Chore chore;
+    chore.setChoreName("nameTest");
+    if (chore.getChoreName() != "nameTest") {
+        cout << "Chore getName and setName test failed" << endl;
+        passed = false;
+    }
+    chore.setFrequency(1);
+    if (chore.getFrequency() != 1) {
+        cout << "Chore getFrequency and setFrequency test failed" << endl;
+        passed = false;
+    }
+    chore.setPointValue(1);
+    if (chore.getPointValue() != 1) {
+        cout << "Chore getPointValue and setPointValue test failed" << endl;
+        passed = false;
+    }
+    Roommate testRoommate;
+    chore.setRoommate(testRoommate);
+    if (chore.getRoommate() != testRoommate) {
+        cout << "Chore roommate assignment test failed" << endl;
+        passed = false;
+    }
+    return passed;
 
+}
+
+bool testTime() {
+    bool passed  = true;
+    Time timeTest;
+    timeTest.setStartTime();
+    time_t currentTime = time(nullptr);
+    if (timeTest.getStartTime() != currentTime) {
+        cout << "time test start time test failed" << endl;
+        passed = false;
+    }
     return passed;
 }

@@ -111,7 +111,14 @@ public:
      */
     void outfile();
 
+    /**
+     * overloaded operators - especially used in testing.cpp
+     * @param lhs left hand side
+     * @param rhs right hand side
+     * @return
+     */
     friend bool operator == (const Chore&lhs, const Chore &rhs);
+    friend bool operator != (const Chore &lhs, const Chore &rhs);
 
 };
 #endif //M2OEP_ASREES_CHORE_H

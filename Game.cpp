@@ -77,14 +77,13 @@ void Game::getInfo() {
     cout << "___________________________________________________________________________________________________________\n" << endl;
 }
 
-void Game::gameFile() {
-    //TODO: write an output file which prints out the roommate scoreboard and the to-do list for all the roommates
-    ofstream outputFile("ChoreOutput.txt");
-    outputFile << "";
-
-    outputFile.close();
-
-}
+//void Game::gameFile() {
+//    ofstream outputFile("ChoreOutput.txt");
+//    outputFile << "";
+//
+//    outputFile.close();
+//
+//}
 
 
 
