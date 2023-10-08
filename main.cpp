@@ -14,7 +14,7 @@ using namespace std;
  * To be completed:
  * @return
  */
-//TODO: write testing program!!!!!!!!!!!
+
 int main() {
     Game game;
     game.printHomeScreen();
@@ -42,22 +42,28 @@ int main() {
         switch(choice) {
             case 'c':
                 //gather the new chore info
-                newChore.getInfo();
-                cout << "Your new chore: " << endl;
-                cout << "Chore name: " << newChore.getChoreName() << endl;
-                cout << "Chore points: " << newChore.getPointValue() << endl;
-                cout << "Chore frequency: every " << newChore.getFrequency() << " day(s)" << endl;
-                newChore.startTime(); //starts the clock for this chore
+                if (roommateList.empty()) {
+                    cout << "You must add roommates to the household first. Type 'n' to add a roommate!" << endl;
+                    choice = game.getPlayerChoice(cout, cin);
+                }
+                else{
+                    newChore.getInfo();
+                    cout << "Your new chore: " << endl;
+                    cout << "Chore name: " << newChore.getChoreName() << endl;
+                    cout << "Chore points: " << newChore.getPointValue() << endl;
+                    cout << "Chore frequency: every " << newChore.getFrequency() << " day(s)" << endl;
+                    newChore.startTime(); //starts the clock for this chore
 
-                //add chore to chore list
-                choreList.push_back(newChore);
+                    //add chore to chore list
+                    choreList.push_back(newChore);
 
-                //assign a roommate to the chore:
-                assignedRoommate = newChore.randomRoommate(roommateList);
-                cout << assignedRoommate.getName() << " has been assigned to the new chore: " << newChore.getChoreName() << endl;
-                newChore.outfile(); //send new chore's info to outfile
-                outputFile.close();
-                choice = game.getPlayerChoice(cout, cin);
+                    //assign a roommate to the chore:
+                    assignedRoommate = newChore.randomRoommate(roommateList);
+                    cout << assignedRoommate.getName() << " has been assigned to the new chore: " << newChore.getChoreName() << endl;
+                    newChore.outfile(); //send new chore's info to outfile
+                    outputFile.close();
+                    choice = game.getPlayerChoice(cout, cin);
+                }
                 break;
             case 'd':
                 //a chore has been accomplished

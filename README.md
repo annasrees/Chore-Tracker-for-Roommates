@@ -25,10 +25,10 @@ There are several classes in this project which use component class relationship
 - There is a runtime error where when a user is given a prompt, it automatically defaults to having a no input validation error, and it alerts the user of no input. This does not effect the functionality of the program
 
 ## Grading
-- I believe my program is appropriately complex, uses many concepts from module 2, and validates all user input (40 pts)
-- There are 2 classes which each contain have 2 has-a class relationships with other classes. I believe these class relationships are designed well, implemented robustly and used in the main program in a way that makes sense. Depending on how these are intended to be divided up grade-wise, I believe I have earned full points for each of these relationships (2 or 4 relationships, depending on how you are grading it therefore 40-80 pts) 
-- There is 1 output file implemented in this program, and I believe it is designed well and implemented in a way that makes sense (5 pts)
-- I have added more robust comments since module 1, and I believe the documentation is clearly organized (0 pts)
-- Testing program?? (20 pts)
+- I believe my program is appropriately complex, uses many concepts from module 2, and validates all user input **(40 pts)**
+- There are 2 classes which each contain have 2 has-a class relationships with other classes. I believe these class relationships are designed well, implemented robustly and used in the main program in a way that makes sense. Depending on how these are intended to be divided up grade-wise, I believe I have earned full points for each of these relationships (2 or 4 relationships, depending on how you are grading it therefore **40-80 pts**) 
+- There is 1 output file implemented in this program, and I believe it is designed well and implemented in a way that makes sense **(5 pts)**
+- I have added more robust comments since module 1, and I believe the documentation is clearly organized **(0 pts)**
+- Testing program - I have created a testing program but it is not as robust as I would like, and doesn't test all the methods I wanted to test. **(10 pts)**
 
 
